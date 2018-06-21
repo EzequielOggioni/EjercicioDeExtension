@@ -28,8 +28,8 @@ namespace WindowsFormsApplication7
 
             this.id = aux.id;
             this.Nombre = aux.Nombre;
-            this.Guardar();
-            ActualizarContador.Invoke();
+            if(this.Guardar())
+                ActualizarContador.Invoke();
 
         }
         

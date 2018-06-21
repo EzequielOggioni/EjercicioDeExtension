@@ -62,12 +62,18 @@ namespace WindowsFormsApplication7
             {
                 this.progressBar1.BeginInvoke((MethodInvoker)delegate()
                 {
-                    this.progressBar1.Value = this.progressBar1.Value + 1;
+                    this.progressBar1.Value = this.progressBar1.Value + 1;                    
+                    if (this.progressBar1.Value == this.progressBar1.Maximum)
+                        MessageBox.Show("Proceso terminado");
                 });
 
             }
             else
-                this.progressBar1.Value = this.progressBar1.Value + 1;
+            {
+                this.progressBar1.Value = this.progressBar1.Value + 1;                
+                if (this.progressBar1.Value == this.progressBar1.Maximum)
+                    MessageBox.Show("Proceso terminado");
+            }            
         }
 
     }
